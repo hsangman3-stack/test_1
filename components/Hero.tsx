@@ -24,20 +24,19 @@ const Hero: React.FC = () => {
           </div>
         </div>
         <div className="md:w-1/2 mt-12 md:mt-0 relative flex justify-center">
-          {/* Replaced image with a decorative geometric composition */}
-          <div className="relative w-72 h-72 md:w-96 md:h-96">
-            <div className="absolute inset-0 bg-orange-100 rounded-3xl rotate-6 border-2 border-orange-200"></div>
-            <div className="absolute inset-0 bg-white rounded-3xl -rotate-3 shadow-xl flex items-center justify-center border border-gray-100">
-               <div className="text-center p-8">
-                  <div className="text-orange-500 mb-4">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" className="mx-auto opacity-20"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
-                  </div>
-                  <p className="text-gray-400 font-medium">Happy Paws Center</p>
-                  <p className="text-gray-300 text-sm">Professional Care Space</p>
-               </div>
+          <div className="relative w-full max-w-lg">
+            {/* Background decorative elements */}
+            <div className="absolute -top-10 -right-10 w-64 h-64 bg-orange-200 rounded-full blur-3xl opacity-50 z-0"></div>
+            <div className="absolute -bottom-10 -left-10 w-48 h-48 bg-yellow-200 rounded-full blur-2xl opacity-50 z-0"></div>
+            
+            {/* Main Featured Image */}
+            <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl transform rotate-2 hover:rotate-0 transition duration-500 border-8 border-white">
+              <img 
+                src="https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&q=80&w=800&h=1000" 
+                alt="Happy Golden Retriever" 
+                className="w-full h-auto object-cover"
+              />
             </div>
-            <div className="absolute -top-6 -right-6 w-24 h-24 bg-yellow-400 rounded-full opacity-20 blur-xl"></div>
-            <div className="absolute -bottom-8 -left-8 w-32 h-32 bg-orange-500 rounded-full opacity-10 blur-2xl"></div>
           </div>
         </div>
       </div>

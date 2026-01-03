@@ -3,12 +3,14 @@ import React from 'react';
 import { GalleryItem } from '../types.ts';
 
 const items: GalleryItem[] = [
-  { id: 1, url: '', title: '행복한 산책시간' },
-  { id: 2, url: '', title: '낮잠 자는 루이' },
-  { id: 3, url: '', title: '그루밍 완료!' },
-  { id: 4, url: '', title: '새 친구를 만났어요' },
-  { id: 5, url: '', title: '간식 먹방' },
-  { id: 6, url: '', title: '유치원 졸업사진' },
+  { id: 1, url: 'https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?auto=format&fit=crop&q=80&w=400&h=400', title: '행복한 산책시간' },
+  { id: 2, url: 'https://images.unsplash.com/photo-1541364983171-a8ba01e95cfc?auto=format&fit=crop&q=80&w=400&h=400', title: '낮잠 자는 루이' },
+  { id: 3, url: 'https://images.unsplash.com/photo-1537151608828-ea2b11777ee8?auto=format&fit=crop&q=80&w=400&h=400', title: '그루밍 완료!' },
+  { id: 4, url: 'https://images.unsplash.com/photo-1587300003388-59208cc962cb?auto=format&fit=crop&q=80&w=400&h=400', title: '새 친구를 만났어요' },
+  { id: 5, url: 'https://images.unsplash.com/photo-1534361960057-19889db9621e?auto=format&fit=crop&q=80&w=400&h=400', title: '간식 먹방' },
+  { id: 6, url: 'https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&q=80&w=400&h=400', title: '센터의 마스코트' },
+  { id: 7, url: 'https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&q=80&w=400&h=400', title: '유치원 놀이시간' },
+  { id: 8, url: 'https://images.unsplash.com/photo-1598133894008-61f7fdb8cc3a?auto=format&fit=crop&q=80&w=400&h=400', title: '친구와 함께' },
 ];
 
 const PetGallery: React.FC = () => {
@@ -18,21 +20,23 @@ const PetGallery: React.FC = () => {
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">센터 갤러리</h2>
           <div className="w-16 h-1 bg-orange-500 mx-auto rounded-full"></div>
-          <p className="mt-4 text-gray-500">(이미지 없이 텍스트로 안내드립니다)</p>
+          <p className="mt-4 text-gray-600">행복한 해피 포즈 아이들의 일상을 만나보세요.</p>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {items.map((item) => (
-            <div key={item.id} className="relative group overflow-hidden rounded-2xl aspect-square bg-orange-50 border border-orange-100 flex items-center justify-center p-6 text-center">
-              <div className="flex flex-col items-center">
-                <div className="w-12 h-12 rounded-full bg-orange-200 mb-4 flex items-center justify-center opacity-50">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-orange-600"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg>
+            <div key={item.id} className="relative group overflow-hidden rounded-2xl aspect-square bg-orange-50 border border-orange-100 shadow-sm transition-all duration-500 hover:shadow-xl">
+              <img 
+                src={item.url} 
+                alt={item.title} 
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                <div className="text-white">
+                  <span className="font-bold text-lg">{item.title}</span>
+                  <p className="text-xs text-orange-200 mt-1 uppercase tracking-widest">Happy Paws Moment</p>
                 </div>
-                <span className="text-gray-700 font-bold text-lg">{item.title}</span>
-                <p className="text-gray-400 text-xs mt-2 uppercase tracking-widest">Moment</p>
               </div>
-              
-              <div className="absolute inset-0 bg-orange-500/5 opacity-0 group-hover:opacity-100 transition duration-300"></div>
             </div>
           ))}
         </div>
