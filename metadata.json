@@ -1,0 +1,8 @@
+{
+  "name": "Happy Paws Pet Center",
+  "description": "A comprehensive, modern pet care center website featuring professional grooming, boarding, and a dedicated AI pet consultant.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
