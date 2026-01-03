@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { ServiceInfo } from '../types';
+import { ServiceInfo } from '../types.ts';
 
 const services: ServiceInfo[] = [
   {

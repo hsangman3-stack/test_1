@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { GalleryItem } from '../types';
+import { GalleryItem } from '../types.ts';
 
 const items: GalleryItem[] = [
   { id: 1, url: '', title: '행복한 산책시간' },
